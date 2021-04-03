@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { ConfigService } from './services/config.service'
+import { ConfigService  } from './services/config.service';
 
 @NgModule({
   declarations: [
