@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
 .navbar-brand{
+    color: white;
     font-size: 32px;
     font-weight: 600;
-    padding: 20px;
 }
