@@ -9,17 +9,18 @@ import { environment } from '../../environments/environment'
 export class ConfigService {
 
   private user!: string;
+  private apiKey:string = environment.searchApiKey
 
   constructor(private http: HttpClient) {
     this.user = 'Paul-Ngigi'
   }
 
   getUser(): Observable<any> {
-    return this.http.get("https://api.github.com/users/" + this.user + '?access_token='+ environment.searchApiKey)
+    return this.http.get("https://api.github.com/users/" + this.user + '?access_token='+ this.apiKey)
   }
 
   getRepos(): Observable<any>{
-    return this.http.get("https://api.github.com/users/" + this.user + "/repos?access_token" + environment.searchApiKey)
+    return this.http.get("https://api.github.com/users/" + this.user + "/repos?access_token" + this.apiKey)
   }
 
   profileUpdate(username: any){
