@@ -48,3 +48,28 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<!-- Repositories -->
+<div class=" container repositories">
+    <h1>REPOSITORIES</h1>
+    <div class="repo-container">
+        <div class=" card-container" *ngFor="let repo of repositories">
+            <div class="card h-100">
+                <div class="card-header bg-info">
+                    <img src="assets/github-logo.png" class="card-img-top" alt="card-logo">
+                </div>
+                <div class="card-body">
+                    Repo-Name: <span>{{repo.name | slice:0:25}}</span> <br>
+                    Description: <span class="card-text">{{repo.description | slice:0:25}}...</span> <br>
+                    Language: <span>{{repo.language | slice:0:25}}</span><br>
+                    Created: <span>{{repo.created_at | date }}</span> <br><br>
+                </div>
+                <div class="card-footer bg-info">
+                    <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
