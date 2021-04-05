@@ -3,12 +3,80 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-.navbar-brand{
+
+.navbar-brand {
     font-size: 32px;
     font-weight: 600;
 }
-.avatar img{
+
+.avatar img {
     border-radius: 50%;
     height: 15rem;
     width: 15rem;
+}
+
+.user-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+    margin-left: -10%;
+    width: 65vw;
+    max-width: 100%;
+    max-height: 50vh;
+}
+
+.user-avatar img {
+    width: 200px;
+    height: 200px;
+    object-fit: fill;
+    border-radius: 50%;
+}
+
+.user-info {
+    line-height: 20px;
+    margin-left: 5%;
+}
+
+.user-info .user-name {
+    font-size: 18px;
+}
+
+.user-info .user-name span {
+    font-size: 13px;
+}
+
+.user-extra {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-extra span {
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+}
+
+.user-extra p {
+    font-size: 15px;
+}
+
+.github-button button {
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+    background-color: deepskyblue;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.github-button button img {
+    width: 20px;
+    height: 20px;
+    object-fit: fill;
 }
