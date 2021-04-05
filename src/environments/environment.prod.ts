@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  searchApiKey : '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',
 };
