@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment'
 export class ConfigService {
 
   private user!: string;
-  private apiKey:string = environment.searchApiKey
+  private apiKey = environment.searchApiKey
 
   constructor(private http: HttpClient) {
     this.user = 'Paul-Ngigi'

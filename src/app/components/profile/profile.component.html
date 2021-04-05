@@ -1,18 +1,50 @@
 <div class="head bg-info p-3"></div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand ms-5 text-info">Github Search</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+        <a class="navbar-brand ms-5 text-info">Github Search</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
-  </nav>
+</nav>
+
+<!-- Header Section -->
+<div class="container">
+    <div class="container user-content">
+        <div class="user-avatar">
+            <img src="{{user.avatar_url}}" alt="profile">
+        </div>
+        <div class="user-info">
+            <p class="user-name">{{user.name}}<br>
+                <span>{{user.login}}</span>
+            </p>
+
+            <div class="user-extra">
+                <span>{{user.public_repos}}</span>&nbsp;
+                <p>Repositories</p>
+                &nbsp;&nbsp;&nbsp;
+
+                <span>{{user.followers}}</span>&nbsp;
+                <p>Followers</p>
+                &nbsp;&nbsp;&nbsp;
+
+                <span>{{user.following}}</span>&nbsp;
+                <p>Following</p>
+            </div>
+
+            <div class="github-button">
+                <a href="{{user.html_url}}" target="_blank"><button><img src="assets/github-logo.png"
+                            alt="button-logo">&nbsp;&nbsp;GITHUB</button></a>
+            </div>
+        </div>
+    </div>
