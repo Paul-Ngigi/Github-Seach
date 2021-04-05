@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ConfigService  } from './services/config.service';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { ConfigService  } from './services/config.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,HttpClientModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]

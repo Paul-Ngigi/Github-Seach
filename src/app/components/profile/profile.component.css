@@ -3,7 +3,6 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-
 .navbar-brand {
     font-size: 32px;
     font-weight: 600;
@@ -11,8 +10,8 @@
 
 .avatar img {
     border-radius: 50%;
-    height: 15rem;
-    width: 15rem;
+    height: 25rem;
+    width: 25rem;
 }
 
 .user-content {
