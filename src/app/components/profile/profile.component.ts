@@ -15,14 +15,14 @@ export class ProfileComponent implements OnInit {
   username!: string
 
   constructor(private request: ConfigService) {
-    this.request.getUser().subscribe(users => {
-      console.log(users);
-      this.user = users;
+    this.request.getUser().subscribe(data => {
+      console.log(data);
+      this.user = data;
     });
 
-    this.request.getRepos().subscribe(repos => {
-      console.log(repos);
-      this.repositories = repos;
+    this.request.getRepos().subscribe(data => {
+      console.log(data);
+      this.repositories = data;
     });
   }
 

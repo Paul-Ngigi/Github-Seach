@@ -73,6 +73,9 @@
     border-radius: 5px;
     text-decoration: none;
 }
+.github-button button:hover{
+    background-color: rebeccapurple;
+}
 
 .github-button button img {
     width: 20px;
@@ -81,86 +84,15 @@
 }
 
 /* Repositories */
-
-.repositories {
-    margin-top: 8%;
-    margin-bottom: 3rem;
-    max-width: 70vw;
-}
-
-.repositories h1 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.repositories .card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-top: 5%;
-    margin-left: 26%;
-}
-.repositories .card button {
-    width: 100px;
-    height: 30px;
+#repos .card-footer button{
     background-color: black;
     color: white;
-    outline: none;
+    padding: 5px 15px;
     border: none;
-    border-radius: 15px;
-    font-size: 14px;
-    color: white;
-    font-weight: bolder;
-    margin-left: 22%;
+    border-radius: 10%;
 }
-.repositories .card button:hover{
-    background-color: green;
-    color: white;
-}
-
-.repo-container {
-    margin-left: 0rem;
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
-    grid-gap: 2.5rem;
-}
-
-/* smaller phones media query */
-
-@media screen and (min-device-width: 280px) and (max-device-width: 653px) {
-    .body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-    .repo-container {
-        margin-left: 0rem;
-        display: inline-grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: auto;
-        grid-gap: 2rem;
-    }
-    .repositories .card {
-        max-height: 100vh;
-        max-width: 100%;
-        width: 100%;
-        border-radius: 10px;
-    }
-    .repositories {
-        margin-top: 8%;
-        max-width: 100vw;
-    }
-    .user-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 8rem;
-        margin-left: 1.8rem;
-        width: 59vw;
-        max-width: 100%;
-        max-height: 50vh;
-    }
+#repos .card-footer button:hover{
+    background-color: rebeccapurple;
 }
 
 /* small phones media query */
@@ -170,23 +102,6 @@
         width: 100vw;
         overflow-x: hidden;
     }
-    .repo-container {
-        margin-left: 0rem;
-        display: inline-grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: auto;
-        grid-gap: 2rem;
-    }
-    .repositories .card {
-        max-height: 100vh;
-        max-width: 100%;
-        width: 100%;
-        border-radius: 10px;
-    }
-    .repositories {
-        margin-top: 8%;
-        max-width: 100vw;
-    }
     .user-content {
         display: flex;
         flex-direction: column;
@@ -199,43 +114,5 @@
         max-height: 50vh;
     }
 }
-
-/* iphone x media query */
-
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
-    body {
-        width: 100vw;
-        overflow-x: hidden;
-    }
-    .repo-container {
-        margin-left: 0rem;
-        display: inline-grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-auto-rows: auto;
-        grid-gap: 2rem;
-    }
-    .repositories .card {
-        max-height: 100vh;
-        max-width: 100%;
-        width: 100%;
-        border-radius: 10px;
-    }
-    .repositories {
-        margin-top: 8%;
-        max-width: 100vw;
-    }
-    .user-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 6rem;
-        margin-left: 2rem;
-        width: 65vw;
-        max-width: 100%;
-        max-height: 50vh;
-    }
-}
-
 
 

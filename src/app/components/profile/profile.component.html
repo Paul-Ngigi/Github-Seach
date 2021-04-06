@@ -1,26 +1,28 @@
-<div class="head bg-info p-3"></div>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand ms-5 text-info">Github Search</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-
-            </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
-                    aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
-    </div>
-</nav>
-
-<!-- Header Section -->
 <div class="container">
+    <ng-progress></ng-progress>
+    <div class="head bg-info p-3"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5 text-info">Github Search</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search"
+                        aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
     <div class="container user-content">
         <div class="user-avatar">
             <img src="{{user.avatar_url}}" alt="profile">
@@ -49,28 +51,27 @@
             </div>
         </div>
     </div>
-</div>
 
 
-<!-- Repositories -->
-<div class=" container repositories">
-    <h1>REPOSITORIES</h1>
-    <div class="repo-container">
-        <div class=" card-container" *ngFor="let repo of repositories">
-            <div class="card h-100">
-                <div class="card-header bg-info">
-                    <img src="assets/github-logo.png" class="card-img-top" alt="card-logo">
-                </div>
-                <div class="card-body">
-                    Repo-Name: <span>{{repo.name}}</span> <br>
-                    Description: <span class="card-text">{{repo.description | slice:0:25}}...</span> <br>
-                    Language: <span>{{repo.language}}</span><br>
-                    Created: <span>{{repo.created_at | date }}</span> <br><br>
-                </div>
-                <div class="card-footer bg-info">
-                    <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
+    <!-- Repositories -->
+    <section id="repos">
+        <div class="row mt-5">
+            <h1 class="text-info">Repositories</h1>
+            <div class="col-md-2 mt-4" *ngFor='let repo of repositories'>
+                <div class="card h-100">
+                    <div class="card-header p-3 bg-info">
+                        <h5>{{repo.name}}</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Description: <span class="card-text">{{repo.description | slice:0:20}}...</span></p>
+                        <p>Language: <span>{{repo.language}}</span></p>
+                        <p>Created: <span>{{repo.created_at | date }}</span></p>
+                    </div>
+                    <div class="card-footer bg-info p-3">
+                        <a href="{{repo.html_url}}" target="_blank"><button>View</button></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
