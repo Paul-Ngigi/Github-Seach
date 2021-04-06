@@ -12,7 +12,6 @@ export class ProfileComponent implements OnInit {
 
   user: Users = new Users("", "", "", "", 0, 0, 0)
   repositories: Repositories[] = [];
-  username!: string
 
   constructor(private request: ConfigService) {
     this.request.getUser().subscribe(data => {
@@ -26,17 +25,7 @@ export class ProfileComponent implements OnInit {
     });
   }
 
-  search() {
-    this.request.profileUpdate(this.username);
-    this.request.getUser().subscribe(data => {
-      console.log(data);
-      this.user = data;
-    });
-    this.request.getRepos().subscribe(data => {
-      console.log(data);
-      this.repositories = data;
-    })
-  }
+  
   ngOnInit(): void {
   }
 

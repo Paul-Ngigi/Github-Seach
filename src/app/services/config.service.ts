@@ -23,7 +23,7 @@ export class ConfigService {
     return this.http.get("https://api.github.com/users/" + this.user + "/repos?access_token" + this.apiKey)
   }
 
-  profileUpdate(username: any){
-    this.user = username;
+  profileUpdate(name: any){
+    this.user = name;
   }
 }
