@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ConfigService  } from './services/config.service';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { NotFoundComponent } from './components/not-found/not-found.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

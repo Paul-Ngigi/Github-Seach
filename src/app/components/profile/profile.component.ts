@@ -28,13 +28,13 @@ export class ProfileComponent implements OnInit {
 
   search() {
     this.request.profileUpdate(this.username);
-    this.request.getUser().subscribe(user => {
-      console.log(user);
-      this.user = user;
+    this.request.getUser().subscribe(data => {
+      console.log(data);
+      this.user = data;
     });
-    this.request.getRepos().subscribe(repositories => {
-      console.log(repositories);
-      this.repositories = repositories;
+    this.request.getRepos().subscribe(data => {
+      console.log(data);
+      this.repositories = data;
     })
   }
   ngOnInit(): void {
